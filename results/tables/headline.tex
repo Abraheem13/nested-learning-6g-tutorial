@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Headline comparison at $\kappa=1.5$ ($n=10$ seeds). Reward is averaged over the stated episode window; SLA, switching cost and queue backlog over the final 30 episodes.}
+\label{tab:headline}
+\footnotesize
+\begin{tabular}{lrrrrrr}
+\toprule
+Method & First-40 & All-80 & Last-20 & SLA & Switching & Queue \\
+\midrule
+IPPO (baseline) & 41.265 & 47.844 & 55.187 & 0.492 & 0.163 & 158.388 \\
+MAPPO & 40.692 & 47.596 & 55.434 & 0.493 & 0.152 & 158.236 \\
+EWC-IPPO & 41.275 & 47.867 & 55.270 & 0.493 & 0.159 & 158.550 \\
+Nested-MARL (ours) & \textbf{46.476} & 50.821 & 55.861 & 0.494 & 0.134 & 158.802 \\
+\bottomrule
+\end{tabular}
+\end{table}

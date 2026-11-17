@@ -1,0 +1,170 @@
+{
+  "spec": {
+    "experiment": "review_partition",
+    "method": "part_tuned_grad_snr",
+    "seed": 1415,
+    "episodes": 80,
+    "kappa": 1.5,
+    "n_agents": 3,
+    "n_slices": 3,
+    "horizon": 150,
+    "tag": "",
+    "tau_slow": 50
+  },
+  "method": {
+    "label": "grad_snr partition (tuned rates)",
+    "learning_rates": [
+      0.001,
+      0.003,
+      0.008
+    ],
+    "ema_lambda": 0.995,
+    "stabilise_beta": 0.95,
+    "centralised_critic": false,
+    "ewc_lambda": 0.0
+  },
+  "env": {
+    "n_agents": 3,
+    "n_slices": 3,
+    "n_regimes": 3,
+    "horizon": 150,
+    "granularity": 4,
+    "prb_total": 100.0,
+    "slice_efficiency": [
+      1.0,
+      0.85,
+      1.15
+    ],
+    "base_load": [
+      34.0,
+      30.0,
+      26.0
+    ],
+    "load_agent_spread": 0.15,
+    "queue_max": 400.0,
+    "queue_ref": 60.0,
+    "reliability_floor": 0.05,
+    "switching_penalty": 0.05,
+    "discount": 0.95,
+    "tau_med": 15,
+    "tau_slow": 50,
+    "kappa": 1.5,
+    "demand_sensitivity": [
+      0.7,
+      1.6,
+      0.7
+    ],
+    "channel_ar_coeff": 0.9,
+    "channel_mean": 0.7,
+    "channel_noise_std": 0.1,
+    "demand_noise_std": 0.1
+  },
+  "params_per_agent": 11024,
+  "optimisers_per_agent": 1,
+  "partition": [
+    {
+      "agent": 0,
+      "kind": "grad_snr",
+      "groups": {
+        "actor.0.weight": 0,
+        "actor.0.bias": 1,
+        "actor.2.weight": 0,
+        "actor.2.bias": 1,
+        "actor.4.weight": 0,
+        "actor.4.bias": 0,
+        "critic.0.weight": 1,
+        "critic.0.bias": 1,
+        "critic.2.weight": 2,
+        "critic.2.bias": 2,
+        "critic.4.weight": 2,
+        "critic.4.bias": 2
+      },
+      "snr": {
+        "actor.0.weight": 0.2158949077129364,
+        "actor.0.bias": 0.2654206454753876,
+        "actor.2.weight": 0.2549344599246979,
+        "actor.2.bias": 0.3538583219051361,
+        "actor.4.weight": 0.17945784330368042,
+        "actor.4.bias": 0.24111180007457733,
+        "critic.0.weight": 0.29944372177124023,
+        "critic.0.bias": 0.4482324421405792,
+        "critic.2.weight": 0.5067001581192017,
+        "critic.2.bias": 0.8515595197677612,
+        "critic.4.weight": 0.4712446928024292,
+        "critic.4.bias": 1.206459879875183
+      }
+    },
+    {
+      "agent": 1,
+      "kind": "grad_snr",
+      "groups": {
+        "actor.0.weight": 1,
+        "actor.0.bias": 0,
+        "actor.2.weight": 1,
+        "actor.2.bias": 0,
+        "actor.4.weight": 0,
+        "actor.4.bias": 0,
+        "critic.0.weight": 1,
+        "critic.0.bias": 2,
+        "critic.2.weight": 2,
+        "critic.2.bias": 2,
+        "critic.4.weight": 1,
+        "critic.4.bias": 2
+      },
+      "snr": {
+        "actor.0.weight": 0.14748342335224152,
+        "actor.0.bias": 0.10600612312555313,
+        "actor.2.weight": 0.13359293341636658,
+        "actor.2.bias": 0.12021777778863907,
+        "actor.4.weight": 0.12046834826469421,
+        "actor.4.bias": 0.1142929270863533,
+        "critic.0.weight": 0.2060602456331253,
+        "critic.0.bias": 0.26075994968414307,
+        "critic.2.weight": 0.2733648717403412,
+        "critic.2.bias": 0.45749542117118835,
+        "critic.4.weight": 0.23596282303333282,
+        "critic.4.bias": 0.5794382095336914
+      }
+    },
+    {
+      "agent": 2,
+      "kind": "grad_snr",
+      "groups": {
+        "actor.0.weight": 0,
+        "actor.0.bias": 1,
+        "actor.2.weight": 0,
+        "actor.2.bias": 1,
+        "actor.4.weight": 0,
+        "actor.4.bias": 1,
+        "critic.0.weight": 0,
+        "critic.0.bias": 2,
+        "critic.2.weight": 1,
+        "critic.2.bias": 2,
+        "critic.4.weight": 2,
+        "critic.4.bias": 2
+      },
+      "snr": {
+        "actor.0.weight": 0.17434175312519073,
+        "actor.0.bias": 0.20893190801143646,
+        "actor.2.weight": 0.15895651280879974,
+        "actor.2.bias": 0.22892504930496216,
+        "actor.4.weight": 0.20795473456382751,
+        "actor.4.bias": 0.216117262840271,
+        "critic.0.weight": 0.14341865479946136,
+        "critic.0.bias": 0.29540684819221497,
+        "critic.2.weight": 0.22055193781852722,
+        "critic.2.bias": 0.4384753108024597,
+        "critic.4.weight": 0.24525947868824005,
+        "critic.4.bias": 0.65801602602005
+      }
+    }
+  ],
+  "elapsed_seconds": 4.293,
+  "platform": {
+    "python": "3.13.7",
+    "torch": "2.14.0",
+    "numpy": "2.5.3",
+    "machine": "arm64",
+    "system": "Darwin"
+  }
+}

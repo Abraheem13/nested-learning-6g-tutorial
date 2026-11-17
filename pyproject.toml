@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nested6g"
+version = "1.1.0"
+description = "Nested Learning for AI-Native 6G Networks: multi-timescale MARL for network slicing"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Raja Abraheem Rashid Ejaz", email = "2546393@brunel.ac.uk" },
+    { name = "Faisal Iradat", email = "firadat@iba.edu.pk" },
+    { name = "Waseem Iqbal", email = "m.waseem@squ.edu.om" },
+    { name = "Yawar Abbas Bangash", email = "yawarb@sunway.edu.my" },
+]
+keywords = [
+    "6G", "O-RAN", "network slicing", "multi-agent reinforcement learning",
+    "nested learning", "multi-timescale", "continual learning", "zero-touch",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=2.0", "numpy>=1.24", "pandas>=2.0",
+    "matplotlib>=3.7", "scipy>=1.10", "tabulate>=0.9",
+]
+
+[project.urls]
+Repository = "https://github.com/Abraheem13/nested-learning-6g-tutorial"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "ruff>=0.4"]
+
+[project.scripts]
+nested6g-run = "nested6g.cli:run_main"
+nested6g-report = "nested6g.cli:report_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 95
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]

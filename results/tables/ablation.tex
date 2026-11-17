@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Ablation at $\kappa=1.5$ ($n=5$ seeds). Each variant removes exactly one ingredient of Nested-MARL.}
+\label{tab:ablation}
+\footnotesize
+\begin{tabular}{lrrrrr}
+\toprule
+Variant & First-40 & All-80 & Last-30 & SLA & Switching \\
+\midrule
+IPPO (baseline) & 41.133 & 47.905 & 55.293 & 0.495 & 0.158 \\
+Same rate (no timescale sep.) & 40.209 & 46.410 & 53.172 & 0.483 & 0.237 \\
+Nested-MARL, 2 timescales & 43.961 & 49.075 & 54.744 & 0.495 & 0.221 \\
+Nested-MARL, no EMA & 46.426 & 50.671 & \textbf{55.324} & 0.497 & 0.156 \\
+Nested-MARL (ours) & 46.363 & 50.614 & 55.306 & 0.494 & 0.146 \\
+\bottomrule
+\end{tabular}
+\end{table}

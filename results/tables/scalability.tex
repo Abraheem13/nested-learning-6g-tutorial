@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Scalability sweep at $\kappa=1.5$: mean reward over the first 40 episodes as the agent count $N$ and slice count $S$ grow.}
+\label{tab:scalability}
+\footnotesize
+\begin{tabular}{lrrrr}
+\toprule
+n\_agents & n\_slices & IPPO (baseline) & MAPPO & Nested-MARL (ours) \\
+\midrule
+3 & 3 & 41.13 & 40.89 & 46.36 \\
+3 & 5 & 3.76 & 3.80 & 10.29 \\
+6 & 3 & 40.06 & 38.34 & 45.84 \\
+6 & 5 & 4.18 & 3.92 & 10.20 \\
+10 & 3 & 40.91 & 39.38 & 45.68 \\
+10 & 5 & 4.16 & 4.27 & 10.49 \\
+\bottomrule
+\end{tabular}
+\end{table}

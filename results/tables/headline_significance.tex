@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\caption{Paired comparison of Nested-MARL against each baseline on first-40-episode reward. $p$-values are two-sided paired permutation tests with Holm correction; PoI is the bootstrap probability of improvement.}
+\label{tab:headline-sig}
+\footnotesize
+\begin{tabular}{lrrrrrrr}
+\toprule
+label & mean\_a & mean\_b & delta & delta\_pct & p\_value & p\_holm & poi \\
+\midrule
+IPPO (baseline) & 46.4763 & 41.2647 & 5.2117 & 12.6298 & 0.0029 & 0.0088 & 0.9700 \\
+MAPPO & 46.4763 & 40.6918 & 5.7846 & 14.2155 & 0.0029 & 0.0088 & 0.9900 \\
+EWC-IPPO & 46.4763 & 41.2749 & 5.2014 & 12.6019 & 0.0029 & 0.0088 & 0.9700 \\
+\bottomrule
+\end{tabular}
+\end{table}

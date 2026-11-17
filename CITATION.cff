@@ -1,0 +1,57 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Nested Learning for AI-Native 6G Networks: reference implementation"
+version: 1.1.0
+date-released: 2026-11-18
+repository-code: "https://github.com/Abraheem13/nested-learning-6g-tutorial"
+license: MIT
+authors:
+  - family-names: "Rashid Ejaz"
+    given-names: "Raja Abraheem"
+    affiliation: "Brunel University London"
+  - family-names: "Iradat"
+    given-names: "Faisal"
+    affiliation: "Institute of Business Administration, Karachi"
+  - family-names: "Iqbal"
+    given-names: "Waseem"
+    affiliation: "Sultan Qaboos University"
+  - family-names: "Bangash"
+    given-names: "Yawar Abbas"
+    affiliation: "Sunway University"
+references:
+  - type: article
+    title: "Nested Multi-Agent Reinforcement Learning for Adaptive Resource
+      Management in 6G Network Slicing: A Multi-Timescale Framework With
+      Convergence Guarantees"
+    journal: "IEEE Open Journal of the Communications Society"
+    volume: 7
+    year: 2026
+    start: 7624
+    end: 7640
+    doi: "10.1109/OJCOMS.2026.3708409"
+    authors:
+      - family-names: "Rashid"
+        given-names: "Abraheem"
+      - family-names: "Iradat"
+        given-names: "Faisal"
+      - family-names: "Iqbal"
+        given-names: "Waseem"
+      - family-names: "Syed"
+        given-names: "Ikram"
+      - family-names: "Khan"
+        given-names: "Khalil"
+      - family-names: "Yahya"
+        given-names: "Khalid"
+  - type: conference-paper
+    title: "Nested Learning: The Illusion of Deep Learning Architectures"
+    collection-title: "Advances in Neural Information Processing Systems"
+    year: 2025
+    authors:
+      - family-names: "Behrouz"
+        given-names: "Ali"
+      - family-names: "Razaviyayn"
+        given-names: "Meisam"
+      - family-names: "Zhong"
+        given-names: "Peilin"
+      - family-names: "Mirrokni"
+        given-names: "Vahab"

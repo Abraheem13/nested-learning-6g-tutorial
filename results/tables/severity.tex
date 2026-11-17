@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Drift-severity sweep, mean reward over the first 40 episodes ($n=10$ seeds per cell). $p$ is a two-sided paired permutation test.}
+\label{tab:severity}
+\footnotesize
+\begin{tabular}{lrrrrr}
+\toprule
+kappa & IPPO & Nested-MARL & Delta & Delta % & p \\
+\midrule
+0.500 & 28.143 & 34.546 & 6.403 & 22.751 & 0.003 \\
+1.000 & 33.508 & 38.968 & 5.460 & 16.294 & 0.003 \\
+1.500 & 41.265 & 46.476 & 5.212 & 12.630 & 0.003 \\
+2.000 & 46.634 & 51.874 & 5.240 & 11.237 & 0.003 \\
+\bottomrule
+\end{tabular}
+\end{table}
